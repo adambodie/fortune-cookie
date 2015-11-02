@@ -1,0 +1,55 @@
+body {
+    background-image:url(../img/background.gif);
+    background-size: cover;
+    color: yellow;
+    font-family: 'Cabin', sans-serif;
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+h3 {
+    padding: 30px;
+}
+.info {
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px black;
+    padding: 20px;
+    margin: 10px;
+    background-color: yellow;
+    color: red;
+}
+
+.ng-pristine, .ng-dirty {
+    color: black;
+}
+
+.btn {
+    margin: 20px;
+    padding: 20px;
+    background-color: red;
+    color: yellow;
+    font-weight: bold;
+    border: 5px groove red;
+}
+.btn:hover {
+    background-color: orange;
+    color: red;
+    border: 5px groove red;
+}
+.btn:disabled {
+    background-color: maroon;
+    border: 5px groove maroon;
+}
+#answer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+@media (max-width: 500px) {
+    body {
+        background: radial-gradient(red 40%, black);
+    }
+}
