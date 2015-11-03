@@ -28,7 +28,7 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="info">
-					<h1>What's your Fortune</h1>
+					<h2>What's your Fortune</h2>
 					<fieldset>
 						<label for="firstName">First Name:</label><br>
 						<input type="text" ng-model="firstName" ng-disabled="mySwitch" class="input"><br>
@@ -37,13 +37,15 @@
 						<label for="age">Age:</label><br>
 						<input type="text" ng-model="age" ng-disabled="mySwitch" class="input"><br>
 					</fieldset>
-					<button ng-click="toggle()" ng-disabled="mySwitch" class="btn btn-danger">Read Me</button>
-					<button ng-click="reset()" ng-model="mySwitch" class="btn btn-danger">Try Again</button>
+					<div class="buttons">
+						<button ng-click="toggle()" ng-disabled="mySwitch" class="btn">Read Me</button>
+						<button ng-click="reset()" class="btn">Try Again</button>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="info" style="height: 370px;">
-				<h1>Read Your Fortune</h1>
+				<div class="info">
+				<h2>Read Your Fortune</h2>
 				<p ng-show="myVar" id="answer">{{age - ((firstName | length) + (lastName | length)) | random}}</p>
 				</div>
 			</div>

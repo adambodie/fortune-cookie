@@ -55,7 +55,7 @@ var app = angular.module("myApp", [])
         "One man's trash is another person's treasure.  Remember that the next time you want to throw something in the trash.",
         "It never hurts to double-check your work, or to have someone check it for you.",
         "Helping someone out who needs it will not only benefit them, but make you feel like you've made a difference.",
-        "Recycling is good for the earch, and good for the soul.",
+        "Recycling is good for the earth, and good for the soul.",
         "Time flies when you're having fun.  Cherish every moment of it.",
         "Now is a good time to clean out your closet.  There's nothing wrong with a little organization.",
         "Just because it's raining outside doesn't mean you can't have any fun.",
