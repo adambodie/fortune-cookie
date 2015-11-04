@@ -46,6 +46,7 @@ fieldset .ng-pristine, .ng-dirty, .ng-valid, .ng-valid-parse > input {
     width: 300px;
 }
 
+
 #answer {
     padding: 50px;
     text-align: center;
@@ -92,7 +93,7 @@ fieldset .ng-pristine, .ng-dirty, .ng-valid, .ng-valid-parse > input {
     
     .info {
 		margin-bottom: 40px;
-		margin-top: 40px;    
+		margin-top: 40px;  
     }
     .btn {
 		max-width: 100px;    

@@ -1,4 +1,4 @@
-*html~
-*css~
-*js~
+*.html~
+*css/main.css~
+*.js~
 ^year

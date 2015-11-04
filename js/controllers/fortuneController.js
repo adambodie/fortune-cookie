@@ -4,6 +4,10 @@ app.controller('fortuneController', ['$scope', function($scope) {
     $scope.age = 30;
     $scope.mySwitch = false;
     $scope.myVar = false;
+    
+    $scope.number = function () {
+		return $scope.age - ($scope.firstName + $scope.lastName).length   
+    }
     $scope.toggle = function() {
         if ($scope.firstName == "" || $scope.lastName == "" || $scope.age == "") {
             alert("Please enter a value")
