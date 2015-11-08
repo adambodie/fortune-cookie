@@ -53,5 +53,15 @@ var fortune = [
 "Now is a good time to clean out your closet.  There's nothing wrong with a little organization.", 
 "Just because it's raining outside doesn't mean you can't have any fun.", 
 "Why don't you take a minute and enjoy your morning coffee.", 
-"When trouble calls, don't panic and be sure to consider all your options."
+"When trouble calls, don't panic and be sure to consider all your options.",
+"Sometimes it's just nice to relax at home and watch the rain.",
+"Your life will be so much better when everything is organized.",
+"It's good to make a mistake once in a while.  That way you will learn not to repeat it.",
+"Always show respect for your competition.  You will be rewarded by your respect in the long run.",
+"Don't be afraid of what you don't know.  New experiences are good for the soul.",
+"Keep your friends close and your enemies closer.",
+"Having an easy night at home is nice once in a while.  Don't make your life too hectic.",
+"The next time you feel bad about yourself, remember there are people dealing with far worse.",
+"Your intelligence will help you get out of touch situations.",
+"There's always a challenge worth pursuing.  Go for it!"
 ];

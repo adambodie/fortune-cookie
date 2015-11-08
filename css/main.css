@@ -46,6 +46,9 @@ fieldset .ng-pristine, .ng-dirty, .ng-valid, .ng-valid-parse > input {
     width: 300px;
 }
 
+input:focus {
+	border: none;
+}
 
 #answer {
     padding: 50px;
@@ -68,6 +71,9 @@ fieldset .ng-pristine, .ng-dirty, .ng-valid, .ng-valid-parse > input {
     background-color: orange;
     color: red;
     border: 5px groove red;
+}
+.btn:focus {
+	color: yellow;
 }
 .btn:disabled {
     background-color: maroon;
