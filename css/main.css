@@ -2,8 +2,7 @@
 ****************************/
 
 body {
-    background-image:url(../img/background.jpg);
-    background-size: cover;
+	 background: radial-gradient(red 40%, black);
     color: yellow;
     font-family: 'Cabin', sans-serif;
 }
@@ -22,7 +21,8 @@ h3 {
     border-radius: 20px;
     box-shadow: 2px 2px 20px black;
     padding: 10px;
-    margin: 10px;
+    margin-bottom: 40px;
+	 margin-top: 40px;  
     background-color: yellow;
     color: red;
     height: 400px;
@@ -53,13 +53,15 @@ input:focus {
 #answer {
     padding: 50px;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
+    vertical-align: center;
 }
 
 
 /* Button CSS
 ****************************/
 .btn {
+	 max-width: 100px;    
     margin: 20px;
     padding: 20px;
     background-color: red;
@@ -92,20 +94,17 @@ input:focus {
 /* QUERY CSS
 *****************************/
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
     body {
-        background: radial-gradient(red 40%, black);
+    	background-image:url(../img/background.jpg);
+    	background-size: cover;        
     }
     
     .info {
-		margin-bottom: 40px;
-		margin-top: 40px;  
-    }
-    .btn {
-		max-width: 100px;    
+		 margin: 10px;
     }
     
     #answer {
-		font-size: 1.5em;    
+		font-size: 2em;    
     }
 }
