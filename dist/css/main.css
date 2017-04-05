@@ -1,0 +1,90 @@
+/* Essential CSS
+****************************/
+body {
+  background: radial-gradient(red 40%, black);
+  color: yellow;
+  font-family: 'Cabin', sans-serif; }
+
+h2 {
+  text-align: center;
+  font-weight: bold; }
+
+h3 {
+  padding: 30px; }
+
+/* Info CSS
+****************************/
+.info {
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px black;
+  padding: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  background-color: yellow;
+  color: red;
+  height: 400px; }
+
+fieldset {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  text-align: left; }
+  fieldset .ng-pristine, fieldset .ng-dirty, fieldset .ng-valid, fieldset .ng-valid-parse > input {
+    color: black;
+    border-radius: 10px;
+    height: 50px;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 1.2em;
+    width: 300px; }
+
+input:focus {
+  border: none; }
+
+.answer {
+  padding: 50px;
+  text-align: center;
+  font-size: 1.5em;
+  vertical-align: center; }
+
+/* Button CSS
+****************************/
+.btn {
+  max-width: 100px;
+  margin: 20px;
+  padding: 20px;
+  background-color: red;
+  color: yellow;
+  font-weight: bold;
+  border: 5px groove red; }
+  .btn:hover {
+    background-color: orange;
+    color: red;
+    border: 5px groove red; }
+  .btn:focus {
+    color: yellow; }
+  .btn:disabled {
+    background-color: maroon;
+    border: 5px groove maroon; }
+
+.buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px; }
+
+/* QUERY CSS
+*****************************/
+@media (min-width: 769px) {
+  body {
+    background-image: url(../img/background.jpg);
+    background-size: cover; }
+
+  .info {
+    margin: 10px; }
+
+  #answer {
+    font-size: 2em; } }
+
+/*# sourceMappingURL=main.css.map */
