@@ -43,10 +43,9 @@ input:focus {
   border: none; }
 
 .answer {
-  padding: 50px;
+  padding: 20px;
   text-align: center;
-  font-size: 1.5em;
-  vertical-align: center; }
+  vertical-align: middle; }
 
 /* Button CSS
 ****************************/
@@ -73,6 +72,39 @@ input:focus {
   margin-left: auto;
   margin-right: auto;
   max-width: 300px; }
+
+/* Fortune CSS
+*********************************/
+.side-a, .side-b {
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  line-height: 0;
+  height: 100px; }
+
+.content {
+  perspective: 700px; }
+
+.fortune {
+  transition: transform 1s cubic-bezier(0.55, -0.62, 0.27, 1.2);
+  transform-style: preserve-3d; }
+  .fortune:hover {
+    transform: rotate3d(0, 1, 0, 180deg); }
+
+.side-a,
+.side-b {
+  backface-visibility: hidden; }
+
+.side-b {
+  transform: rotateY(180deg); }
 
 /* QUERY CSS
 *****************************/
