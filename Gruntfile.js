@@ -12,6 +12,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    jsonlint: {
+      sample: {
+        src: [ './src/data/fortunes.json' ],
+        options: {
+          formatter: 'prose'
+        }
+      }
+    },
     cssmin: {
         options: {
           mergeIntoShorthands: false,
@@ -60,8 +68,9 @@ module.exports = function(grunt) {
      grunt.loadNpmTasks('grunt-contrib-cssmin');
      grunt.loadNpmTasks('grunt-contrib-watch');
      grunt.loadNpmTasks('grunt-wiredep');
+     grunt.loadNpmTasks('grunt-jsonlint');
 
-     grunt.registerTask('default', ['jshint', 'sass', 'cssmin', 'watch']);
+     grunt.registerTask('default', ['jshint', 'sass', 'cssmin', 'watch', 'wiredep', 'jsonlint']);
      grunt.registerTask('css', ['sass', 'cssmin']);
 
 };
