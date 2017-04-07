@@ -1,7 +1,7 @@
 app.controller('fortuneController', ['$scope', function($scope) {
-	$scope.firstName = "John",
-	$scope.lastName = "Doe"
-	$scope.age = 30;
+	$scope.firstName = "",
+	$scope.lastName = ""
+	$scope.age = "";
 	$scope.mySwitch = false;
 	$scope.myVar = false;
     

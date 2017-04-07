@@ -22,11 +22,11 @@
 					<h2>What's your Fortune</h2>
 					<fieldset>
 						<label for="firstName">First Name:</label><br>
-						<input type="text" ng-model="firstName" ng-disabled="mySwitch" class="input"><br>
+						<input type="text" ng-model="firstName" ng-model-options="{updateOn: 'blur'}" ng-disabled="mySwitch" class="input"><br>
 						<label for="lastName">Last Name:</label><br>
-						<input type="text" ng-model="lastName" ng-disabled="mySwitch" class="input"><br>
+						<input type="text" ng-model="lastName" ng-model-options="{updateOn: 'blur'}" ng-disabled="mySwitch" class="input"><br>
 						<label for="age">Age:</label><br>
-						<input type="text" ng-model="age" ng-disabled="mySwitch" class="input"><br>
+						<input type="text" ng-model="age" ng-model-options="{updateOn: 'blur'}" ng-disabled="mySwitch" class="input"><br>
 					</fieldset>
 					<div class="buttons">
 						<button ng-click="toggle()" ng-disabled="mySwitch" class="btn">Read Me</button>
