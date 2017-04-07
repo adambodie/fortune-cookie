@@ -1,17 +1,36 @@
 app.controller('numberController', ['$scope', function($scope) {
-    
-    $scope.lucky = function () {
-		$scope.random = Math.floor(Math.random() * 10 + 6);
-		$scope.parseAge = Number.parseInt($scope.age);    	
-		$scope.one = $scope.lastName.length * $scope.random;
-		$scope.two = $scope.firstName.length * $scope.random;
-		$scope.three = $scope.parseAge + $scope.random; 
-		$scope.four = Math.floor($scope.one + $scope.parseAge + ($scope.random));
-		$scope.five = Math.floor($scope.two + $scope.parseAge + ($scope.random));
-		$scope.six = Math.abs($scope.one + $scope.two - $scope.three + $scope.four - $scope.five);
-		return $scope.one + " " + $scope.two + " " + $scope.three + " " + $scope.four + " " + $scope.five + " " + $scope.six;   
-    
+
+    $scope.random = Math.round(Math.random() * 10);
+
+    $scope.luckyOne = function() {
+      return $scope.lastName.length * $scope.random;
     }
+
+    $scope.luckyTwo = function() {
+      return Math.floor(1000 / ($scope.firstName.length * $scope.random));
+    }
+
+    $scope.luckyThree = function() {
+      $scope.parseAge = Number.parseInt($scope.age);
+      return $scope.parseAge + $scope.random;
+    }
+
+    $scope.luckyFour = function () {
+      $scope.parseAge = Number.parseInt($scope.age);
+      return $scope.random * ($scope.parseAge + $scope.lastName.length);
+    }
+
+    $scope.luckyFive = function () {
+      $scope.parseAge = Number.parseInt($scope.age);
+      return $scope.random + ($scope.parseAge + $scope.firstName.length);
+    }
+
+    $scope.luckySix = function () {
+      $scope.parseAge = Number.parseInt($scope.age);
+      return Math.floor(($scope.parseAge * ($scope.lastName.length + $scope.firstName.length)/$scope.random));
+    }
+
+
 
     $scope.toggle = function() {
         if ($scope.firstName == "" || $scope.lastName == "" || $scope.age == "") {
@@ -27,6 +46,7 @@ app.controller('numberController', ['$scope', function($scope) {
         $scope.age = "";
         $scope.myVar = false;
         $scope.mySwitch = false;
+        $scope.random = Math.round(Math.random() * 10);
     }
-    
+
 }]);
