@@ -37,12 +37,12 @@
 			<div class="col-md-6">
 				<div class="info content">
 					<h2>Read Your Fortune</h2>
-					<div class="fortune">
+					<div ng-show="myVar" class="fortune">
 						<div class="side-a">
-							<p ng-show="myVar" class="answer">{{fortuneCookie}}</p>
+							<p class="answer">{{fortuneCookie}}</p>
 						</div>
 						<div class="side-b">
-							<p ng-show="myVar" class="answer">{{luckyNumbers}}</p>
+							<p class="answer">{{luckyNumbers}}</p>
 						</div>
 					</div>
 				</div>
