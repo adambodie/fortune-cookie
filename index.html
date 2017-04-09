@@ -15,8 +15,8 @@
 <body>
 <div class="container">
 	<header><img src="dist/img/banner.gif" class="img-responsive" alt="Read Your Fortune Cookie"></header>
-	<div ng-app="myApp" ng-controller="fortuneController" name="form">
-		<div class="row" ng-controller="numberController">
+	<div ng-app="myApp" ng-controller="FortuneController" name="form">
+		<div class="row">
 			<div class="col-md-6">
 				<div class="info">
 					<h2>What's your Fortune</h2>
@@ -29,7 +29,7 @@
 						<input type="text" ng-model="age" ng-model-options="{updateOn: 'blur'}" ng-disabled="mySwitch" class="input"><br>
 					</fieldset>
 					<div class="buttons">
-						<button ng-click="toggle()" ng-disabled="mySwitch" class="btn">Read Me</button>
+						<button ng-click="submit()" ng-disabled="mySwitch" class="btn">Read Me</button>
 						<button ng-click="reset()" class="btn">Try Again</button>
 					</div>
 				</div>
@@ -39,10 +39,10 @@
 					<h2>Read Your Fortune</h2>
 					<div class="fortune">
 						<div class="side-a">
-							<p ng-show="myVar" class="answer">{{number() | random}}</p>
+							<p ng-show="myVar" class="answer">{{fortuneCookie}}</p>
 						</div>
 						<div class="side-b">
-							<p ng-show="myVar" class="answer">{{luckyOne()}} {{luckyTwo()}} {{luckyThree()}} {{luckyFour()}} {{luckyFive()}} {{luckySix()}}</p>
+							<p ng-show="myVar" class="answer">{{luckyNumbers}}</p>
 						</div>
 					</div>
 				</div>
@@ -59,9 +59,7 @@
     <!-- Modules -->
     <script src="dist/js/app.js"></script>
     <!-- Controllers -->
-    <script src="dist/js/controllers/fortuneController.js"></script>
-    <script src="dist/js/controllers/numberController.js"></script>
-
+    <script src="dist/js/controllers/FortuneController.js"></script>
 
 </body>
 </html>

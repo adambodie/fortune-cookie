@@ -87,7 +87,6 @@ input:focus {
   justify-content: center;
   align-items: center;
   background-color: #FFF;
-  line-height: 0;
   height: 100px; }
 
 .content {
