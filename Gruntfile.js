@@ -61,7 +61,14 @@ module.exports = function(grunt) {
           // https://github.com/taptapship/wiredep#configuration
         }
       }
-    }
+    },
+    connect: {
+        server: {
+          options: {
+            port: 3000,
+          }
+        },
+      }
   });
      grunt.loadNpmTasks('grunt-contrib-jshint');
      grunt.loadNpmTasks('grunt-contrib-sass');
@@ -69,6 +76,7 @@ module.exports = function(grunt) {
      grunt.loadNpmTasks('grunt-contrib-watch');
      grunt.loadNpmTasks('grunt-wiredep');
      grunt.loadNpmTasks('grunt-jsonlint');
+     grunt.loadNpmTasks('grunt-contrib-connect');
 
      grunt.registerTask('default', ['jshint', 'sass', 'cssmin', 'watch', 'wiredep', 'jsonlint']);
      grunt.registerTask('css', ['sass', 'cssmin']);
