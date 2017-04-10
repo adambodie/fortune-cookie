@@ -9,12 +9,12 @@ app.controller('FortuneController', ['$scope', '$http', function($scope, $http) 
 	$scope.randomTwo = Math.round(Math.random() * 10);
 
 	$scope.getFortunes = function (index){
-	        $http.get('./src/data/fortunes.json')
-	            .then(function (result) {
+		$http.get('./src/data/fortunes.json')
+			.then(function (result) {
 									$scope.fortuneCookie = result.data.fortune[index].value;
 									return $scope.fortuneCookie;
-	            });
-	    };
+		});
+	};
 
 	$scope.number = function () {
 		$scope.fortuneValue = Number.parseInt($scope.age) - ($scope.firstName + $scope.lastName).length;
@@ -55,23 +55,23 @@ app.controller('FortuneController', ['$scope', '$http', function($scope, $http) 
 	}
 
 	$scope.submit = function() {
-		if ($scope.firstName == "" || $scope.lastName == "" || $scope.age == "") {
-      	alert("Please enter a value")
-      } else {
-      	$scope.myVar = !$scope.myVar;
+		$scope.myVar = !$scope.myVar;
         $scope.mySwitch = true;
-				$scope.answer = $scope.getFortunes($scope.number());
-				$scope.lucky = [$scope.luckyOne(), $scope.luckyTwo(), $scope.luckyThree(), $scope.luckyFour(), $scope.luckyFive(), $scope.luckySix()];
-				$scope.luckyNumbers = $scope.lucky.join(' ');
-      }
+		if ($scope.firstName == "" || $scope.lastName == "" || $scope.age == "") {
+			$scope.fortuneCookie = "Please enter all values";
+		} else {
+			$scope.fortuneCookie = $scope.getFortunes($scope.number());
+			$scope.lucky = [$scope.luckyOne(), $scope.luckyTwo(), $scope.luckyThree(), $scope.luckyFour(), $scope.luckyFive(), $scope.luckySix()];
+			$scope.luckyNumbers = $scope.lucky.join(' ');
+		}
 	}
    $scope.reset = function() {
-   		 $scope.firstName = "";
-       $scope.lastName = "";
-       $scope.age = "";
-       $scope.myVar = false;
-       $scope.mySwitch = false;
-			 $scope.random = Math.round(Math.random() * 100)
-			 $scope.randomTwo = Math.round(Math.random() * 10);
+		$scope.firstName = "";
+		$scope.lastName = "";
+		$scope.age = "";
+		$scope.myVar = false;
+		$scope.mySwitch = false;
+		$scope.random = Math.round(Math.random() * 100)
+		$scope.randomTwo = Math.round(Math.random() * 10);
     }
 }]);
