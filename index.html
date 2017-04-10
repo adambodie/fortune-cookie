@@ -36,15 +36,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="info content">
-					<h2>Read Your Fortune</h2>
-					<div ng-show="myVar" class="fortune">
-						<div class="side-a">
-							<p class="answer">{{fortuneCookie}}</p>
-						</div>
-						<div class="side-b">
-							<p class="answer">{{luckyNumbers}}</p>
-						</div>
-					</div>
+						<fortune></fortune>
 				</div>
 			</div>
 		</div>
@@ -60,6 +52,8 @@
     <script src="dist/js/app.js"></script>
     <!-- Controllers -->
     <script src="dist/js/controllers/FortuneController.js"></script>
+		<!-- Directives -->
+		<script src="dist/js/directives/fortune.js"></script>
 
 </body>
 </html>
