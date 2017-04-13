@@ -1,3 +1,5 @@
+/* Variables
+****************************/
 /* Essential CSS
 ****************************/
 body {
@@ -22,13 +24,14 @@ h3 {
   margin-top: 40px;
   background-color: yellow;
   color: red;
-  height: 400px; }
+  height: 400px;
+  max-width: 600px; }
 
 fieldset {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 300px;
+  max-width: 400px;
   text-align: left; }
   fieldset .ng-pristine, fieldset .ng-dirty, fieldset .ng-valid, fieldset .ng-valid-parse > input {
     color: black;
@@ -37,7 +40,7 @@ fieldset {
     text-align: left;
     padding-left: 20px;
     font-size: 1.2em;
-    width: 300px; }
+    width: 400px; }
 
 input:focus {
   border: none; }
@@ -50,28 +53,31 @@ input:focus {
 /* Button CSS
 ****************************/
 .btn {
-  max-width: 100px;
+  width: 480px;
   margin: 20px;
   padding: 20px;
-  background-color: red;
-  color: yellow;
-  font-weight: bold;
-  border: 5px groove red; }
-  .btn:hover {
-    background-color: orange;
-    color: red;
-    border: 5px groove red; }
-  .btn:focus {
-    color: yellow; }
-  .btn:disabled {
-    background-color: maroon;
-    border: 5px groove maroon; }
-
-.buttons {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 300px; }
+  background-color: #ff0000;
+  border-radius: 10px;
+  color: yellow;
+  font-weight: bold;
+  box-shadow: 0 5px black; }
+  .btn:hover {
+    background-color: #990000;
+    color: white; }
+  .btn:focus {
+    color: yellow; }
+  .btn:disabled {
+    background-color: gray;
+    color: black; }
+  .btn:active {
+    transform: translateY(5px); }
+
+.reset {
+  position: absolute;
+  margin-top: 120px; }
 
 /* Fortune CSS
 *********************************/
@@ -90,7 +96,16 @@ input:focus {
   height: 100px; }
 
 .content {
-  perspective: 700px; }
+  perspective: 700px;
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 500px;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important; }
 
 .fortune {
   transition: transform 1s cubic-bezier(0.55, -0.62, 0.27, 1.2);

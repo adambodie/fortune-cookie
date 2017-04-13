@@ -1,9 +1,13 @@
-<h2>Read Your Fortune</h2>
-<div ng-show="myVar" class="fortune">
-<div class="side-a">
-  <p class="answer">{{fortuneCookie}}</p>
-</div>
-<div class="side-b">
-  <p class="answer">{{luckyNumbers}}</p>
-</div>
+<div ng-show="myVar" class="info content">
+	<h2>Read Your Fortune</h2>
+	<div class="fortune">
+		<div class="side-a">
+			<p class="answer">{{fortuneCookie}}</p>
+		</div>
+		<div class="side-b">
+			<p class="answer">{{luckyNumbers}}</p>
+		</div>
+	</div>
+	<button ng-click="reset()" class="btn reset">Try Again</button>
+
 </div>
