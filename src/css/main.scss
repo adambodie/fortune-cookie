@@ -37,8 +37,7 @@ h3 {
 
 fieldset {
  	display: block;
- 	margin-left: auto;
- 	margin-right: auto;
+ 	margin: 0 auto;
  	max-width: 400px;
  	text-align: left;
 	.ng-pristine, .ng-dirty, .ng-valid, .ng-valid-parse > input {
@@ -120,13 +119,19 @@ input:focus {
 	perspective: 700px;
 	position: absolute;
     z-index: 10000;
+    background-color: yellow;
+    color: red;
     top: 0;
     right: 0;
     left: 0;
 	width: 500px;
     display: block;
     margin-left: auto!important;
-    margin-right: auto!important    
+    margin-right: auto!important;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px black;
+    padding: 10px;
+    height: 300px;
 }
 
 .fortune {
@@ -145,6 +150,9 @@ input:focus {
 	transform: rotateY(180deg);
 }
 
+.numbers {
+	color: red;
+}
 
 /* QUERY CSS
 *****************************/
