@@ -24,8 +24,7 @@ h3 {
   margin-top: 40px;
   background-color: yellow;
   color: red;
-  height: 400px;
-  max-width: 600px; }
+  height: 400px; }
 
 fieldset {
   display: block;
@@ -39,7 +38,8 @@ fieldset {
     text-align: left;
     padding-left: 20px;
     font-size: 1.2em;
-    width: 400px; }
+    width: 400px;
+    margin: 10px; }
 
 input:focus {
   border: none; }
