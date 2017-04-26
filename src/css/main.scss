@@ -64,7 +64,6 @@ input:focus {
 /* Button CSS
 ****************************/
 .btn {
-	width: 480px;
     margin: 20px;
     padding: 20px;
     display: block;
@@ -94,7 +93,6 @@ input:focus {
 
 
 .reset {
-	position: absolute;
 	margin-top: 120px;
 }
 
@@ -124,14 +122,14 @@ input:focus {
     top: 0;
     right: 0;
     left: 0;
-	width: 500px;
+	max-width: 500px;
     display: block;
+    margin-top: 150px;
     margin-left: auto!important;
     margin-right: auto!important;
     border-radius: 20px;
     box-shadow: 2px 2px 20px black;
     padding: 10px;
-    height: 300px;
 }
 
 .fortune {

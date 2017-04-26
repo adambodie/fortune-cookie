@@ -7,7 +7,6 @@ app.controller('FortuneController', ['$scope', '$http', function($scope, $http) 
 
 	$scope.random = Math.round(Math.random() * 50);
 	$scope.randomTwo = Math.round(Math.random() * 10);
-
 	$scope.getFortunes = function (index){
 		$http.get('./src/data/fortunes.json')
 			.then(function (result) {
@@ -27,34 +26,55 @@ app.controller('FortuneController', ['$scope', '$http', function($scope, $http) 
 	}
 
 	$scope.luckyOne = function() {
-		return $scope.lastName.length * $scope.randomTwo;
+		var one = $scope.lastName.length * $scope.randomTwo;
+		if (one > 99) {
+			one = Math.floor(one/10);
+		}
+		return one;
 	}
 
 	$scope.luckyTwo = function() {
-		return Math.floor(1000 / ($scope.firstName.length * $scope.randomTwo));
+		var two = Math.floor(1000 / ($scope.firstName.length * $scope.randomTwo));
+		if (two > 99) {
+			two = Math.floor(three/10);
+		}
+		return two;
 	}
 
 	$scope.luckyThree = function() {
-		$scope.parseAge = Number.parseInt($scope.age);
-		return $scope.parseAge + $scope.randomTwo;
+		var three = $scope.parseAge + $scope.randomTwo;
+		if (three > 99) {
+			three = Math.floor(three/10);
+		}
+		return three;
 	}
 
 	$scope.luckyFour = function () {
-		$scope.parseAge = Number.parseInt($scope.age);
-		return $scope.randomTwo + ($scope.parseAge + $scope.lastName.length);
+		var four = $scope.randomTwo + ($scope.parseAge + $scope.lastName.length);		
+		if (four > 99) {
+			four = Math.floor(four/10);
+		}
+		return four;
 	}
 
 	$scope.luckyFive = function () {
-		$scope.parseAge = Number.parseInt($scope.age);
-		return $scope.randomTwo + ($scope.parseAge + $scope.firstName.length);
+		var five = $scope.randomTwo + ($scope.parseAge + $scope.firstName.length);			
+		if (five > 99) {
+			five = Math.floor(five/10);
+		}
+		return five; 
 	}
 
 	$scope.luckySix = function () {
-		$scope.parseAge = Number.parseInt($scope.age);
-		return Math.floor(($scope.parseAge * ($scope.lastName.length + $scope.firstName.length)/$scope.randomTwo));
+		var six = Math.floor(($scope.parseAge * ($scope.lastName.length + $scope.firstName.length)/$scope.randomTwo));;			
+		if (six > 99) {
+			six = Math.floor(six/10);
+		}
+		return six; 
 	}
 
 	$scope.submit = function() {
+		$scope.parseAge = Number.parseInt($scope.age);		
 		$scope.myVar = !$scope.myVar;
         $scope.mySwitch = true;
 		if ($scope.firstName == "" || $scope.lastName == "" || $scope.age == "") {
