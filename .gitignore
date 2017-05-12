@@ -1,5 +1,2 @@
-*.html~
-*.css~
-*.js~
-*~
-^year
+node_modules/
+.sass-cache/

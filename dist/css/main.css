@@ -1,0 +1,144 @@
+/* Variables
+****************************/
+/* Essential CSS
+****************************/
+body {
+  background: radial-gradient(red 40%, black);
+  color: yellow;
+  font-family: 'Cabin', sans-serif; }
+
+h2 {
+  text-align: center;
+  font-weight: bold; }
+
+h3 {
+  padding: 30px; }
+
+/* Info CSS
+****************************/
+.info {
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px black;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  background-color: yellow;
+  color: red;
+  height: 400px; }
+  .info h2 {
+    background-color: red;
+    color: yellow;
+    padding: 20px;
+    margin: 0;
+    border-radius: 20px 20px 0 0; }
+
+fieldset {
+  display: flex;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px; }
+
+input:focus {
+  border: none; }
+
+.answer {
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle; }
+
+/* Button CSS
+****************************/
+.btn {
+  padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff0000;
+  border-radius: 10px;
+  color: yellow;
+  font-weight: bold;
+  box-shadow: 0 5px black; }
+  .btn:hover {
+    background-color: #990000;
+    color: white; }
+  .btn:focus {
+    color: yellow; }
+  .btn:disabled {
+    background-color: gray;
+    color: black; }
+  .btn:active {
+    transform: translateY(5px); }
+
+.reset {
+  margin-top: 120px;
+  margin-bottom: 20px; }
+
+/* Fortune CSS
+*********************************/
+.side-a, .side-b {
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  height: 100px; }
+
+.content {
+  perspective: 700px;
+  position: absolute;
+  z-index: 10000;
+  background-color: yellow;
+  color: red;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-width: 500px;
+  display: block;
+  margin-top: 150px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px black; }
+  .content h2 {
+    background-color: red;
+    color: yellow;
+    padding: 20px;
+    margin: 0;
+    border-radius: 20px 20px 0 0; }
+
+.fortune {
+  margin: 10px;
+  transition: transform 1s cubic-bezier(0.55, -0.62, 0.27, 1.2);
+  transform-style: preserve-3d; }
+  .fortune:hover {
+    transform: rotate3d(0, 1, 0, 180deg); }
+
+.side-a,
+.side-b {
+  backface-visibility: hidden; }
+
+.side-b {
+  transform: rotateY(180deg); }
+
+.numbers {
+  color: red; }
+
+/* QUERY CSS
+*****************************/
+@media (min-width: 769px) {
+  body {
+    background-image: url(../img/background.jpg);
+    background-size: cover; }
+
+  .info {
+    margin: 10px; }
+
+  #answer {
+    font-size: 2em; } }
+
+/*# sourceMappingURL=main.css.map */
