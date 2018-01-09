@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Fortune Cookie",
   "dependencies": {
+    "@bower_components/angular": "angular/bower-angular#^1.6.4",
+    "@bower_components/bootstrap": "twbs/bootstrap#^3.3.7",
+    "@bower_components/jquery": "jquery/jquery-dist#^3.2.1",
+    "@bower_components/normalize-css": "necolas/normalize.css#^6.0.0",
+    "jquery": "^3.2.1",
     "normalize.css": "^6.0.0"
   },
   "devDependencies": {
@@ -16,7 +21,8 @@
     "grunt-wiredep": "^3.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
   },
   "repository": {
     "type": "git",
@@ -27,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/adambodie/Fortune-Cookie/issues"
   },
-  "homepage": "https://github.com/adambodie/Fortune-Cookie#readme"
+  "homepage": "https://github.com/adambodie/Fortune-Cookie#readme",
+  "engines": {
+    "yarn": ">= 1.0.0"
+  }
 }

@@ -66,6 +66,7 @@ module.exports = function(grunt) {
         server: {
           options: {
             port: 3000,
+            keepalive: true
           }
         },
       }
@@ -77,8 +78,8 @@ module.exports = function(grunt) {
      grunt.loadNpmTasks('grunt-wiredep');
      grunt.loadNpmTasks('grunt-jsonlint');
      grunt.loadNpmTasks('grunt-contrib-connect');
-
-     grunt.registerTask('default', ['jshint', 'sass', 'cssmin', 'watch', 'wiredep', 'jsonlint']);
+     grunt.registerTask('server', ['connect', 'watch']);
+     grunt.registerTask('default', ['jshint', 'sass', 'cssmin', 'wiredep', 'jsonlint']);
      grunt.registerTask('css', ['sass', 'cssmin']);
 
 };
