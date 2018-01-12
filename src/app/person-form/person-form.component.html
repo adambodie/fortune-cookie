@@ -1,0 +1,14 @@
+<div [hidden]="submitted">
+	<form (ngSubmit)="onSubmit()" #personForm="ngForm">
+	<div class="form-group">
+		<input type="text" class="form-control input" placeholder="First Name" id="first" [(ngModel)]="model.first" name="first" #name="ngModel">
+		<input type="text" class="form-control input" placeholder="Last Name" id="last" [(ngModel)]="model.last" name="last" #name="ngModel">
+		<input type="text" class="form-control input" placeholder="Age" id="age" [(ngModel)]="model.age" name="age" #name="ngModel">
+	</div>
+	<button type="submit" class="btn">Read Me</button>
+</form>
+</div>
+<div [hidden]="!submitted">
+	<h1>{{numbers}}</h1>
+	 <button class="btn btn-primary" (click)="submitted=false">Reset</button>
+</div>

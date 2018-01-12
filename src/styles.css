@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: radial-gradient(red 40%, black);
+  color: yellow;
+  font-family: 'Cabin', sans-serif; }
+
+h2 {
+  text-align: center;
+  font-weight: bold; }
+
+h3 {
+  padding: 30px; }
+  
+  @media (min-width: 769px) {
+  body {
+    background-image: url(./assets/img/background.jpg);
+    background-size: cover; }
+}
