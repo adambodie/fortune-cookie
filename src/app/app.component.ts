@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	title = 'What\'s Your Fortune';
+
+	date = 2018;
 }
