@@ -1,17 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
+import { Data } from '../data';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-person-form',
   templateUrl: './person-form.component.html',
-  styleUrls: ['./person-form.component.css']
+  styleUrls: ['./person-form.component.css'],
+  providers: [DataService]
 })
-export class PersonFormComponent {
+export class PersonFormComponent implements OnInit {
 	title = 'What\'s Your Fortune';
 	submitted = false;
 	numbers = "";
+	fortuneValue = "";
 	model = new Person('', '', null);
-	
+	fortuneData: Data[];
+	constructor(private dataService: DataService) { }
+	getFortuneData(): void {
+		this.dataService.getData().then(data => this.fortuneData = data);						
+	}
+
+   ngOnInit(): void {
+    this.getFortuneData();
+  }
 	one(last, random) {
 		let multiplier = last * random;
 		let number = ( multiplier >= 100 ) ? Math.round( multiplier / 10 ) : multiplier;
@@ -49,6 +61,7 @@ export class PersonFormComponent {
 		this.submitted = true;
 		let random = Math.round(Math.random() * 50);
 		let randomTwo = Math.round(Math.random() * 10);
+		let randomFortune = Math.floor(Math.random() * this.fortuneData.length);
 		let last = this.model.last.length;
 		let first = this.model.first.length;
 		let age = parseInt(this.model.age);
@@ -59,5 +72,6 @@ export class PersonFormComponent {
 		let numberFive = this.four(age, last, randomTwo);
 		let numberSix = this.five(age, first, last, randomTwo);
 		this.numbers = this.luckyNumbers(numberOne, numberTwo, numberThree, numberFour, numberFive, numberSix);
+		this.fortuneValue = this.fortuneData[randomFortune].value;
 	}
 }

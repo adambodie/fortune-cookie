@@ -2,7 +2,7 @@ export class Person {
 constructor(
     public first: string,
     public last: string,
-    public age: number
+    public age: string
   ) {  }
 
 }

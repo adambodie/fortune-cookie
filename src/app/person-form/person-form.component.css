@@ -24,12 +24,11 @@ input:focus {
   margin-bottom: 40px;
   margin-top: 40px;
   background-color: yellow;
-  color: #7b0505;
   height: 400px; 
   }
 
   .info h2 {
-    background-color: red;
+    background-color: #7b0505;
     text-shadow: 2px 2px 4px black;
     color: yellow;
     padding: 20px;
@@ -45,7 +44,7 @@ input:focus {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ff0000;
+  background-color: #7b0505;
   border-radius: 10px;
   color: yellow;
   font-weight: bold;
@@ -105,7 +104,7 @@ input:focus {
   border-radius: 20px;
   box-shadow: 2px 2px 20px black; }
   .content h2 {
-    background-color: red;
+    background-color: #7b0505;
     color: yellow;
     padding: 20px;
     margin: 0;
@@ -131,4 +130,9 @@ input:focus {
 
 .row-button {
 	margin-top: 150px;
+}
+
+.row-fortune {
+  margin-left: 0;
+  margin-right: 0;
 }
