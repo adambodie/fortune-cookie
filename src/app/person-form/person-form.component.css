@@ -71,6 +71,7 @@ input:focus {
   margin-top: 120px;
   margin-bottom: 20px; }
 
+
 /* Fortune CSS
 *********************************/
 .side-a, .side-b {
@@ -85,7 +86,8 @@ input:focus {
   justify-content: center;
   align-items: center;
   background-color: #FFF;
-  height: 100px; }
+  height: 100px; 
+  }
 
 .content {
   perspective: 700px;
