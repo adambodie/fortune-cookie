@@ -1,29 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 import { Person } from '../person';
 import { Data } from '../data';
-import { DataService } from '../data.service';
 
 @Component({
   selector: 'person-form',
   templateUrl: './person-form.component.html',
   styleUrls: ['./person-form.component.css'],
-  providers: [DataService]
 })
-export class PersonFormComponent implements OnInit {
+export class PersonFormComponent {
 	title = 'What\'s Your Fortune';
 	submitted = false;
 	numbers = "";
 	fortuneValue = "";
 	model = new Person('', '', null);
-	fortuneData: Data[];
-	constructor(private dataService: DataService) { }
-	getFortuneData(): void {
-		this.dataService.getData().then(data => this.fortuneData = data);
+	items: Observable<any[]>;
+	constructor(db: AngularFirestore) {
+	  this.items = db.collection('items').valueChanges();
 	}
 
-   ngOnInit(): void {
-    this.getFortuneData();
-  }
 	multiply(a, b) {
 		let multiply = a * b;
 		let number = ( multiply >= 100 ) ? Math.round( multiply / 10 ) : multiply;
@@ -50,7 +46,6 @@ export class PersonFormComponent implements OnInit {
 		this.submitted = true;
 		let random = Math.round(Math.random() * 50);
 		let randomTwo = Math.round(Math.random() * 10);
-		let randomFortune = Math.floor(Math.random() * this.fortuneData.length);
 		let last = this.model.last.length;
 		let first = this.model.first.length;
 		let age = parseInt(this.model.age);
@@ -65,7 +60,7 @@ export class PersonFormComponent implements OnInit {
 			let five = this.add(age, last, randomTwo);
 			let six = this.mix(age, first, last, randomTwo);
 			this.numbers = this.luckyNumbers(one, two, three, four, five, six);
-			this.fortuneValue = this.fortuneData[randomFortune].value;
+			this.fortuneValue = 'Testing';
 		}
 	}
 }
