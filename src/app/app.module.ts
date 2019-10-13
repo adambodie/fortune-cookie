@@ -6,12 +6,16 @@ import { PersonFormComponent } from './person-form/person-form.component';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonFormComponent
+    PersonFormComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AngularFirestoreModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

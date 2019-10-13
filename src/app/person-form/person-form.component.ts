@@ -17,9 +17,9 @@ export class PersonFormComponent {
 		this.items = db.collection('items', ref => ref.where('id', '==', Math.round(this.random))).valueChanges();
 	}
 
-	submitted = false;
+	submitted: boolean = false;
 	incomplete: boolean;
-	numbers = "";
+	numbers: string = "";
 	model = new Person('', '', null);
 
 	shuffle(array: Array<any>) {
@@ -35,19 +35,19 @@ export class PersonFormComponent {
 		return array;
 	}
 
-	add(a: any, b: any, c?: any) {
+	add(a: number, b: number, c?: number) {
 		let add = (c) ? a + b + c : a + b;
 		let number = ( add >= 100 ) ? Math.round( add / 10 ) : add;
 		return number;
 	}
 
-	mix(a: any, b: any, c: any, d: any) {
+	mix(a: number, b: number, c: number, d: number) {
 		let mix = (a + b) * (c + d);
 		let number = ( mix >= 100 ) ? Math.round( mix /10 ) : mix;
 		return number; 
 	}
 
-	luckyNumbers(one: any, two: any, three: any, four: any, five: any, six: any) {
+	luckyNumbers(one: number, two: number, three: number, four: number, five: number, six: number) {
 		let numbers = this.shuffle([one, two, three, four, five, six]);
 		return numbers.join(" ");
 	}
