@@ -25,6 +25,8 @@ input:focus {
   margin-top: 40px;
   background-color: yellow;
   height: 400px; 
+  display: flex;
+  flex-direction: column;
   }
 
   .info h2 {
