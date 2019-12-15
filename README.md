@@ -10,3 +10,7 @@ I built this app first using AngularJS, to showcase my skills in AngularJS, as w
 
 ### Version 2
 With AngularJS being updated to Angular, I rebuilt this project using Angular with Typescript, backed with Webpack. 
+
+### Version 2.1
+In 2019, I configured the app to resolve a long-standing issue for me, how to retrieve data from a database rather than mock-data.  For the simplicity of this project, I added Firebase in order to make this possible.
+
